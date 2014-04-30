@@ -8,7 +8,7 @@ if [ -d /opt/puppet ] ; then
 	git pull
 	librarian-puppet update --verbose
 else
-	git clone https://RAT@git.opitz-consulting.de/scm/~rat/public-puppet.git /opt/puppet
+	git clone https://github.com/rattermeyer/puppet-main.git /opt/puppet
 	librarian-puppet install --verbose --clean
 fi
 echo "applying puppet"
