@@ -6,9 +6,12 @@ echo "Updating / Cloning /opt/puppet"
 if [ -d /opt/puppet ] ; then
 	cd /opt/puppet
 	git pull
-	librarian-puppet update --verbose
+	rm Puppetfile.lock
+	librarian-puppet clean
+	librarian-puppet install --verbose
 else
 	git clone https://github.com/rattermeyer/puppet-main.git /opt/puppet
+	cd /opt/puppet
 	librarian-puppet install --verbose --clean
 fi
 echo "applying puppet"
