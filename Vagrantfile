@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
+  config.vm.box = "devopsarchitect/ubuntu-trusty-docker-puppet-14.04"
   config.vm.hostname = "ubuntu-trusty"
 
   # The url from where the 'config.vm.box' box will be fetched if it
@@ -51,6 +51,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
      # Use VBoxManage to customize the VM. For example to change memory:
      vb.customize ["modifyvm", :id, "--memory", "4096"]
+     vb.customize ["modifyvm", :id, "--vram", "64"]
+     vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
   end
   #
   # View the documentation for the provider you're using for more
