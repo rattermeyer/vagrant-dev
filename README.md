@@ -19,7 +19,7 @@ What's installed
 * JBoss Wildfly
 * Apache Tomcat 7
 * node.js
-* n
+* n: Node version management
 * Yeoman
 * Protractor
 * Squirrel SQL
@@ -31,10 +31,11 @@ This is a fairly simple project to get up and running.
 The project will set up a vagrant box with 4 GB memory requirements.
 The procedure for starting up a vagrant box is as follows:
 
-Clone the project. (There’s only master branch.)
-Run the command `vagrant box add puppetlabs/ubuntu-14.04-64-puppet && vagrant up`
-Choose the provider you use (tested with VirtualBox)
-This will take some time (around 30min for me).
+* Install [Vagrant](http://www.vagrantup.com)
+* Clone the project. (There’s only master branch.)
+* Run the command `vagrant up`
+
+This will take some time (around 60min for me).
 
 Login in with user `dev` with password `pleasechange`
 
